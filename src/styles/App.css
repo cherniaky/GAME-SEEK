@@ -10,10 +10,22 @@
   --buttonPrimary: rgb(65, 65, 65);
 }
 
+html,
+body {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  /* background-color: rgb(235, 236, 230); */
+  background-color: rgb(61, 60, 60);
+  margin: 0px;
+  position: relative;
+
+  overflow-x: hidden;
+}
+
 .pagesContainer{
-    height: 100vh;
+    height:100vh;
     width: 100%;
-    background-color: rgb(61, 60, 60);
+   
     display: flex;
     justify-content: center;
     /* align-items: center; */

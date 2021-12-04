@@ -7,8 +7,8 @@ import gamecubeBoard from "./assets/boards/gamecube.jpg";
 import xbox360Board from "./assets/boards/xbox360.jpg";
 import ps4Board from "./assets/boards/ps4.jpg";
 
-const levelData = {
-  0: {
+const levelData = [
+   {
     level: 0,
     name: "N64",
     board: n64Board,
@@ -33,7 +33,7 @@ const levelData = {
       },
     ],
   },
-  1: {
+   {
     level: 1,
     name: "PS1",
     board: ps1Board,
@@ -58,7 +58,7 @@ const levelData = {
       },
     ],
   },
-  2: {
+  {
     level: 2,
     name: "Dreamcast",
     board: dreamcastBoard,
@@ -83,7 +83,7 @@ const levelData = {
       },
     ],
   },
-  3: {
+   {
     level: 3,
     name: "XBox",
     board: xboxBoard,
@@ -108,7 +108,7 @@ const levelData = {
       },
     ],
   },
-  4: {
+   {
     level: 4,
     name: "PS2",
     board: ps2Board,
@@ -133,7 +133,7 @@ const levelData = {
       },
     ],
   },
-  5: {
+  {
     level: 5,
     name: "Gamecube",
     board: gamecubeBoard,
@@ -158,7 +158,7 @@ const levelData = {
       },
     ],
   },
-  6: {
+   {
     level: 6,
     name: "XBox360",
     board: xbox360Board,
@@ -183,7 +183,7 @@ const levelData = {
       },
     ],
   },
-  7: {
+   {
     level: 7,
     name: "PS4",
     board: ps4Board,
@@ -208,6 +208,6 @@ const levelData = {
       },
     ],
   },
-};
+];
 
 export default levelData;

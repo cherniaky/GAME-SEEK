@@ -4,7 +4,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+ "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -28,6 +29,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: var(--textPrimary);
+  z-index: 20;
 }
 
 .logo {

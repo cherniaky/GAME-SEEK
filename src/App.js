@@ -4,11 +4,13 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InfoPage from "./pages/InfoPage";
 import allLevelData from "./allLevelData";
+import HomePage from "./pages/HomePage";
+
 
 function App() {
     const [inGame, setInGame] = useState(false);
     const [inLeaderboard, setInLeaderboard] = useState(false);
-    const [inHome, setInHome] = useState(true);
+    const [inHome, setInHome] = useState(false);
     const [inInfo, setInInfo] = useState(false);
     const [level, setLevel] = useState(0);
     const [levelData, setLevelData] = useState(allLevelData);
@@ -30,6 +32,21 @@ function App() {
             />
             <div className="pagesContainer">
                 <Routes>
+                    <Route
+                        exact
+                        path="/"
+                        element={
+                            <HomePage
+                                setLevel={setLevel}
+                                levelData={levelData}
+                                setInGame={setInGame}
+                                setInLeaderboard={setInLeaderboard}
+                                setInHome={setInHome}
+                                setInInfo={setInInfo}
+                            />
+                        }
+                    />
+
                     <Route
                         exact
                         path="/info"
