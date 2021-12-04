@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+  --primary: rgb(34, 34, 34);
+  --textPrimary: whitesmoke;
+  --buttonPrimary: rgb(65, 65, 65);
+}
+
+.pagesContainer{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}

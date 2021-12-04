@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary: rgb(34, 34, 34);
+  --textPrimary: whitesmoke;
+  --buttonPrimary: rgb(65, 65, 65);
+}
+
+.nav-container {
+  position: fixed;
+  background-color: var(--primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 75px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--textPrimary);
+}
+
+.logo {
+  max-height: 30px;
+  position: absolute;
+  left: 40%;
+}
+
+.nav-button {
+  background-color: var(--primary);
+  color: var(--textPrimary);
+  border: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 5px 10px;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-button:hover {
+  background-color: var(--buttonPrimary);
+}
+
+.leaderHeader {
+  cursor: default;
+}
+
+.left-nav-button {
+  margin-left: 15rem;
+}
+
+.right-nav-button {
+  margin-right: 15rem;
+}

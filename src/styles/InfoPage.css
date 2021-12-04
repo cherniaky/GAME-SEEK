@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+  --primary: rgb(34, 34, 34);
+  --textPrimary: whitesmoke;
+  --buttonPrimary: rgb(65, 65, 65);
+}
+
+.info-container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+   width: minmax( 40%,fit-content);
+    background-color: var(--primary);
+    color: var(--textPrimary);
+    height: 45vh;
+    margin: 6rem 0 0;
+    font-size: 1.7rem;
+}
+
+.about-p{
+    padding: 2rem;
+}
+.github-link-a{
+    color: white;
+}
+
+.info-ul{
+    font-size: 1.4rem;
+}
+
+.about-link-a{
+    color: white;
+}
