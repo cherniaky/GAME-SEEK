@@ -24,7 +24,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 75px;
+  min-height: 75px;
+
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -70,4 +71,35 @@
 
 .right-nav-button {
   margin-right: 15rem;
+}
+.character-img{
+  max-height: 55px;
+}
+
+.characters-container{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+  justify-content: center;
+  padding-right: 2rem;
+   transition: 0.32s linear;
+}
+
+.character-container:hover {
+  transform: scale(2);
+  height: 8rem;
+  margin: 5px 50px;
+}
+
+.faded{
+  opacity: 0.3;
 }

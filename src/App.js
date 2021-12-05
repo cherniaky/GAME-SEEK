@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InfoPage from "./pages/InfoPage";
 import allLevelData from "./allLevelData";
 import HomePage from "./pages/HomePage";
-
+import Game from './pages/Game';
 
 function App() {
     const [inGame, setInGame] = useState(false);
@@ -40,6 +40,23 @@ function App() {
                                 setLevel={setLevel}
                                 levelData={levelData}
                                 setInGame={setInGame}
+                                setInLeaderboard={setInLeaderboard}
+                                setInHome={setInHome}
+                                setInInfo={setInInfo}
+                            />
+                        }
+                    />
+                    <Route
+                        exact
+                        path="/game"
+                        element={
+                            <Game
+                                level={level}
+                                username={username}
+                                updateUsername={handleUpdateUsername}
+                                levelData={levelData}
+                                characters={characters}
+                                setCharacters={setCharacters}
                                 setInLeaderboard={setInLeaderboard}
                                 setInHome={setInHome}
                                 setInInfo={setInInfo}

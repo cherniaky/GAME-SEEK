@@ -104,7 +104,7 @@ function NavBar({
                         </button>
                     </div>
 
-                    <div className="nav-container">{gameCharacters}</div>
+                    <div className="characters-container">{gameCharacters}</div>
                 </>
             )}
         </div>
