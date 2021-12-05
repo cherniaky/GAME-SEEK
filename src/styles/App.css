@@ -10,6 +10,21 @@
   --buttonPrimary: rgb(65, 65, 65);
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  z-index: 100;
+  /* display: none;  */
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 html,
 body {
   font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -23,7 +38,7 @@ body {
 }
 
 .pagesContainer{
-    height:100vh;
+    height:100%;
     width: 100%;
    
     display: flex;
