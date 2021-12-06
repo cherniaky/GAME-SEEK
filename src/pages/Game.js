@@ -133,6 +133,22 @@ export default function Game({
         hideDropdown();
     };
 
+     const submitScore = async () => {
+        //  const highscoreRef = await firestore
+        //      .collection("games")
+        //      .doc(gameId)
+        //      .get();
+        //  const highscoreData = highscoreRef.data();
+        //  const newHighscore = {
+        //      gameId,
+        //      level: highscoreData.level,
+        //      time: highscoreData.elapsedSeconds,
+        //      name: customFilter.clean(username),
+        //      date: highscoreData.date,
+        //  };
+        //  firestore.collection("highscores").add(newHighscore);
+     };
+
     return (
         <div className="game-wrapper">
             <div className="relative">
@@ -156,7 +172,7 @@ export default function Game({
                 seconds={elapsedSeconds}
                 username={username}
                 updateUsername={updateUsername}
-                submitScore={()=>console.log(7)}
+                submitScore={submitScore}
             />
         </div>
     );

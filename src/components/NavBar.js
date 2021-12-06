@@ -5,16 +5,18 @@ import '../styles/NavBar.css'
 import Character from "../Characters"
 
 function NavBar({
-    inHome=true,
-    setInHome,
-    inLeadersBoard,
-    setInLeadersBoard,
-    inGame ,
-    setInGame,
-    inInfo,
-    characters,
+    inGame,
+                setInGame,
+                characters,
+                setInLeadersBoard,
+                inLeaderboard,
+                inHome,
+                inInfo,
 }) {
    // let gameCharacters;
+//    if (!inGame && !inHome && !inInfo) {
+//     setInLeadersBoard(true);
+//    }
 
    let gameCharacters = characters.map((character) => {
         return (
@@ -28,6 +30,29 @@ function NavBar({
 
     return (
         <div className="nav-container">
+            {inLeaderboard   && (
+                <>
+                    <div className="linkContainer">
+                        <Link style={{ color: "#FFF" }} to="/">
+                            <button
+                                className="left-nav-button nav-button"
+                                onClick={() => setInGame(false)}
+                            >
+                                <span className="nav-button-span">Home</span>
+                                {/* <img src="https://img.icons8.com/ios/30/000000/leadership.png" /> */}
+                            </button>
+                        </Link>
+                    </div>
+                    <h1 className="leaderHeader">Leaderboard</h1>
+                    <div className="linkContainer">
+                        <button className="right-nav-button nav-button">
+                            <Link style={{ color: "#FFF" }} to="/info">
+                                <span className="nav-button-span">Info</span>
+                            </Link>
+                        </button>
+                    </div>
+                </>
+            )}
             {inHome && (
                 <>
                     <div className="linkContainer">
@@ -50,26 +75,7 @@ function NavBar({
                     </div>
                 </>
             )}
-            {inLeadersBoard && (
-                <>
-                    <div className="linkContainer">
-                        <Link style={{ color: "#FFF" }} to="/">
-                            <button className="left-nav-button nav-button">
-                                <span className="nav-button-span">Home</span>
-                                {/* <img src="https://img.icons8.com/ios/30/000000/leadership.png" /> */}
-                            </button>
-                        </Link>
-                    </div>
-                    <h1 className="leaderHeader">Leaderboard</h1>
-                    <div className="linkContainer">
-                        <button className="right-nav-button nav-button">
-                            <Link style={{ color: "#FFF" }} to="/info">
-                                <span className="nav-button-span">Info</span>
-                            </Link>
-                        </button>
-                    </div>
-                </>
-            )}
+
             {inInfo && (
                 <>
                     <div className="linkContainer">

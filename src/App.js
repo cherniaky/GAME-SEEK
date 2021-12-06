@@ -6,6 +6,8 @@ import InfoPage from "./pages/InfoPage";
 import allLevelData from "./allLevelData";
 import HomePage from "./pages/HomePage";
 import Game from './pages/Game';
+import LeaderBoard from './pages/LeaderBoard';
+
 
 function App() {
     const [inGame, setInGame] = useState(false);
@@ -26,6 +28,7 @@ function App() {
                 inGame={inGame}
                 setInGame={setInGame}
                 characters={characters}
+                setInLeadersBoard={setInLeaderboard}
                 inLeaderboard={inLeaderboard}
                 inHome={inHome}
                 inInfo={inInfo}
@@ -57,6 +60,21 @@ function App() {
                                 levelData={levelData}
                                 characters={characters}
                                 setCharacters={setCharacters}
+                                setInLeaderboard={setInLeaderboard}
+                                setInHome={setInHome}
+                                setInInfo={setInInfo}
+                            />
+                        }
+                    />
+                    <Route
+                        exact
+                        path="/leaderboard"
+                        element={
+                            <LeaderBoard
+                                setLevel={setLevel}
+                                level={level}
+                                levelData={levelData}
+                                setInGame={setInGame}
                                 setInLeaderboard={setInLeaderboard}
                                 setInHome={setInHome}
                                 setInInfo={setInInfo}
