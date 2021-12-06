@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import allLevelData from "../allLevelData";
 import OutsideClickHandler from "react-outside-click-handler";
-import '../styles/Game.css';
+import "../styles/Game.css";
 import CharacterDropdown from "../components/CharacterDropdown";
 import Modal from "../components/Modal";
+import { saveScore } from "../firebase";
 
 export default function Game({
     level,
@@ -70,7 +71,7 @@ export default function Game({
             //                 setElapsedSeconds(data?.elapsedSeconds);
             //             });
             //     });
-             setElapsedSeconds(score);
+            setElapsedSeconds(score);
         }
     }, [gameover]);
 
@@ -128,12 +129,17 @@ export default function Game({
             setCharacters(updatedCharacters);
         }
 
-        
         //firestore.collection("playerSelection").add(gameSelection);
         hideDropdown();
     };
 
-     const submitScore = async () => {
+    const submitScore = async () => {
+        const d = new Date();
+       // d.toDateString();
+        const player = { name:username, time: elapsedSeconds ,level:level,date:d.toDateString()};
+
+        saveScore(player);
+
         //  const highscoreRef = await firestore
         //      .collection("games")
         //      .doc(gameId)
@@ -147,7 +153,7 @@ export default function Game({
         //      date: highscoreData.date,
         //  };
         //  firestore.collection("highscores").add(newHighscore);
-     };
+    };
 
     return (
         <div className="game-wrapper">
