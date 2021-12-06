@@ -37,7 +37,7 @@ const LeaderboardTable = (props) => {
                         </th>
                         <th
                             scope="col"
-                            className="leaderboard-table-column-header col-header-right"
+                            className="leaderboard-table-column-header "
                         >
                             Time (Seconds)
                         </th>

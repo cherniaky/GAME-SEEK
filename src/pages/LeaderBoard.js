@@ -33,7 +33,7 @@ const Leaderboard = ({
             //     leaderArray.push(doc.data());
             // });
            await getData(leaderArray);
-            console.log("leaderarr", leaderArray);
+            //console.log("leaderarr", leaderArray);
             function compare(a, b) {
                 const score1 = a.time;
                 const score2 = b.time;

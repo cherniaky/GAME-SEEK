@@ -1,3 +1,9 @@
+
+:root {
+  --primary: rgb(34, 34, 34);
+  --textPrimary: whitesmoke;
+  --buttonPrimary: rgb(65, 65, 65);
+}
 .leaderboard-container{
     display: flex;
     flex-direction: column;
@@ -75,6 +81,74 @@
 }
 
 .leaderboard-table-container{
+  vertical-align: middle;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
     width: 70%;
+    color: white;
     
+}
+.leaderboard-table{
+  width: 100%;
+  border-collapse: collapse;
+  text-indent: 0;
+  border-radius: 5px;
+}
+
+.leaderboard-table thead{
+ letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--textPrimary);
+  background-color: var(--primary);
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+}
+.leaderboard-table-column-header{
+  padding: 0.5rem;
+  text-transform: uppercase;
+  align-items:flex-start;
+ 
+}
+
+.col-header-left {
+  border-top-left-radius: 5px;
+  width: 10%;
+  text-align: center;
+}
+.col-header-middle {
+  width: 30%;
+  padding-left: 1.5rem;
+}
+.col-header-right {
+  padding-left: 1.5rem;
+  border-top-right-radius: 5px;
+}
+
+.leaderboard-table-body {
+  border: solid 1px gray;
+}
+
+
+.leaderboard-row {
+  border-bottom: solid 1px gray;
+}
+.leaderboard-place-cell {
+  
+  text-align: center;
+  padding: 1rem 1.5rem;
+  color: var(--textPrimary);
+}
+.leaderboard-name-cell {
+ 
+  padding: 1rem 1.5rem;
+}
+.leaderboard-name-text {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--textPrimary);
+}
+.leaderboard-time-cell {
+  color: var(--textPrimary);
+ 
+  padding: 1rem 1.5rem;
 }

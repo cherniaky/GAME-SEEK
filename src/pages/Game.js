@@ -135,24 +135,10 @@ export default function Game({
 
     const submitScore = async () => {
         const d = new Date();
-       // d.toDateString();
+       
         const player = { name:username, time: elapsedSeconds ,level:level,date:d.toDateString()};
 
         saveScore(player);
-
-        //  const highscoreRef = await firestore
-        //      .collection("games")
-        //      .doc(gameId)
-        //      .get();
-        //  const highscoreData = highscoreRef.data();
-        //  const newHighscore = {
-        //      gameId,
-        //      level: highscoreData.level,
-        //      time: highscoreData.elapsedSeconds,
-        //      name: customFilter.clean(username),
-        //      date: highscoreData.date,
-        //  };
-        //  firestore.collection("highscores").add(newHighscore);
     };
 
     return (
