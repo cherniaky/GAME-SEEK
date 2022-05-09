@@ -23,7 +23,7 @@ function App() {
     };
 
     return (
-        <Router basename="/photo_tagging_app">
+        <Router basename="/GAME-SEEK">
             <NavBar
                 inGame={inGame}
                 setInGame={setInGame}
